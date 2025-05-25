@@ -27,7 +27,12 @@ void afficherMenuFiltres8() {
         printf("1. Negatif\n");
         printf("2. Luminosite\n");
         printf("3. Threshold\n");
-        printf("4. Retourner au menu precedent\n");
+        printf("4. Box Blur\n");
+        printf("5. Gaussian Blur\n");
+        printf("6. Outline\n");
+        printf("7. Emboss\n");
+        printf("8. Sharpen\n");
+        printf("9. Retourner au menu precedent\n");
 }
 
 void afficherMenu24() {
@@ -146,13 +151,13 @@ int main() {
                                             printf("Filtre applique avec succes !\n");
                                             break;
                                         }
-                                        case 4:
+                                        case 9:
                                             break;
                                         default:
                                             printf("Choix invalide. Veuillez reessayer.\n");
                                         continue;
                                     }
-                                    if (choixFiltre == 4) break;
+                                    if (choixFiltre == 9) break;
                                 }
                             } else {
                                 printf("Aucune image chargee.\n");
