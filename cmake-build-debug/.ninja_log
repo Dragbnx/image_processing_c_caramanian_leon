@@ -1,0 +1,6 @@
+# ninja log v6
+8	116	7698948074337561	CMakeFiles/image_processing_c_caramanian_leon.dir/main.c.obj	e6c7cdd19576d0d5
+5	416	7698959828092083	build.ninja	82bc6e572139b141
+13	152	7698948074389130	CMakeFiles/image_processing_c_caramanian_leon.dir/bmp24.c.obj	4cd2bceb3850c69b
+85	170	7698949722007937	image_processing_c_caramanian_leon.exe	470a9f27fcb633ec
+4	84	7698949721197676	CMakeFiles/image_processing_c_caramanian_leon.dir/bmp8.c.obj	a290a259f1d02267
