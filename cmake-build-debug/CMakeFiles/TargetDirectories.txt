@@ -1,3 +1,3 @@
-C:/Users/A1NZ/OneDrive/Documents/L1-EFREI/Algorithmique et structures de données/image_processing_c_caramanian_leon/cmake-build-debug/CMakeFiles/image_processing_c_caramanian_leon.dir
-C:/Users/A1NZ/OneDrive/Documents/L1-EFREI/Algorithmique et structures de données/image_processing_c_caramanian_leon/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/A1NZ/OneDrive/Documents/L1-EFREI/Algorithmique et structures de données/image_processing_c_caramanian_leon/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/arket/CLionProjects/image_processing_c_caramanian_leon7/cmake-build-debug/CMakeFiles/image_processing_c_caramanian_leon.dir
+C:/Users/arket/CLionProjects/image_processing_c_caramanian_leon7/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/arket/CLionProjects/image_processing_c_caramanian_leon7/cmake-build-debug/CMakeFiles/rebuild_cache.dir

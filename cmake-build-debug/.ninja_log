@@ -1,6 +1,23 @@
 # ninja log v6
 8	116	7698948074337561	CMakeFiles/image_processing_c_caramanian_leon.dir/main.c.obj	e6c7cdd19576d0d5
-5	416	7698959828092083	build.ninja	82bc6e572139b141
+5	416	7699020400150544	build.ninja	82bc6e572139b141
 13	152	7698948074389130	CMakeFiles/image_processing_c_caramanian_leon.dir/bmp24.c.obj	4cd2bceb3850c69b
 85	170	7698949722007937	image_processing_c_caramanian_leon.exe	470a9f27fcb633ec
 4	84	7698949721197676	CMakeFiles/image_processing_c_caramanian_leon.dir/bmp8.c.obj	a290a259f1d02267
+13	88	7699020443892311	CMakeFiles/image_processing_c_caramanian_leon.dir/bmp8.c.obj	4c4fc4a1e0b10462
+5	90	7699020443815109	CMakeFiles/image_processing_c_caramanian_leon.dir/main.c.obj	99e0083e491543c6
+10	116	7699020443861458	CMakeFiles/image_processing_c_caramanian_leon.dir/bmp24.c.obj	c5290cad45907d1
+116	208	7699020444928190	image_processing_c_caramanian_leon.exe	8049a2112eed2d78
+5	86	7699036687495629	CMakeFiles/image_processing_c_caramanian_leon.dir/main.c.obj	99e0083e491543c6
+86	177	7699036688298136	image_processing_c_caramanian_leon.exe	8049a2112eed2d78
+35	328	7699043651653340	CMakeFiles/image_processing_c_caramanian_leon.dir/main.c.obj	99e0083e491543c6
+41	329	7699043651705655	CMakeFiles/image_processing_c_caramanian_leon.dir/bmp8.c.obj	4c4fc4a1e0b10462
+12	92	7699049209406815	CMakeFiles/image_processing_c_caramanian_leon.dir/bmp8.c.obj	4c4fc4a1e0b10462
+6	93	7699049209353114	CMakeFiles/image_processing_c_caramanian_leon.dir/main.c.obj	99e0083e491543c6
+93	186	7699049210226810	image_processing_c_caramanian_leon.exe	8049a2112eed2d78
+10	94	7699050440222877	CMakeFiles/image_processing_c_caramanian_leon.dir/bmp8.c.obj	4c4fc4a1e0b10462
+5	88	7699052439912906	CMakeFiles/image_processing_c_caramanian_leon.dir/main.c.obj	99e0083e491543c6
+11	89	7699052439965763	CMakeFiles/image_processing_c_caramanian_leon.dir/bmp8.c.obj	4c4fc4a1e0b10462
+89	182	7699052440751478	image_processing_c_caramanian_leon.exe	8049a2112eed2d78
+6	92	7699055533085483	CMakeFiles/image_processing_c_caramanian_leon.dir/main.c.obj	99e0083e491543c6
+92	185	7699055533938481	image_processing_c_caramanian_leon.exe	8049a2112eed2d78

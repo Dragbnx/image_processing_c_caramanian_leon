@@ -23,17 +23,19 @@ void afficherMenu8() {
 }
 
 void afficherMenuFiltres8() {
-        printf("Veuillez choisir un filtre :\n");
-        printf("1. Negatif\n");
-        printf("2. Luminosite\n");
-        printf("3. Threshold\n");
-        printf("4. Box Blur\n");
-        printf("5. Gaussian Blur\n");
-        printf("6. Outline\n");
-        printf("7. Emboss\n");
-        printf("8. Sharpen\n");
-        printf("9. Retourner au menu precedent\n");
+    printf("Veuillez choisir un filtre :\n");
+    printf("1. Negatif\n");
+    printf("2. Luminosite\n");
+    printf("3. Threshold\n");
+    printf("4. Box Blur\n");
+    printf("5. Gaussian Blur\n");
+    printf("6. Outline\n");
+    printf("7. Emboss\n");
+    printf("8. Sharpen\n");
+    printf("9. Equalisation d'histogramme\n");
+    printf("10. Retourner au menu precedent\n");
 }
+
 
 void afficherMenu24() {
     printf("Veuillez choisir une option :\n");
@@ -116,13 +118,15 @@ int main() {
                                 char chemin[256];
                                 printf("Chemin du fichier : ");
                                 scanf("%s", chemin);
-                                bmp8_saveImage(image8, chemin);
+                                // Correction de l'ordre des paramètres
+                                bmp8_saveImage(chemin, image8);
                                 printf("Image sauvegardee avec succes !\n");
                             } else {
                                 printf("Aucune image chargee.\n");
                             }
                             break;
                         }
+
                         case 3: {
                             if (image8 != NULL) {
                                 int choixFiltre;
@@ -152,12 +156,18 @@ int main() {
                                             break;
                                         }
                                         case 9:
+                                            bmp8_equalize(image8);
+                                            printf("Egalisation d'histogramme appliquee avec succes !\n");
+                                            break;
+                                        case 10:
                                             break;
                                         default:
                                             printf("Choix invalide. Veuillez reessayer.\n");
-                                        continue;
+                                            continue;
                                     }
-                                    if (choixFiltre == 9) break;
+                                    if (choixFiltre == 10) break;
+
+
                                 }
                             } else {
                                 printf("Aucune image chargee.\n");

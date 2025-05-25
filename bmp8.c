@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "bmp8.h"
 
 t_bmp8* bmp8_loadImage(const char* filename) {
@@ -211,4 +212,78 @@ void bmp8_applyFilter(t_bmp8* img, float** kernel, int kernelSize) {
 
     // Libération de la mémoire temporaire
     free(tempPixels);
+}
+unsigned int* bmp8_computeHistogram(t_bmp8* img) {
+    if (!img || !img->pixels) return NULL;
+
+    unsigned int* histogram = (unsigned int*)calloc(256, sizeof(unsigned int));
+    if (!histogram) return NULL;
+
+    for (unsigned int i = 0; i < img->dataSize; i++) {
+        histogram[img->pixels[i]]++;
+    }
+
+    return histogram;
+}
+
+unsigned int* bmp8_computeCDF(unsigned int* histogram) {
+    if (!histogram) return NULL;
+
+    unsigned int* cdf = (unsigned int*)calloc(256, sizeof(unsigned int));
+    if (!cdf) return NULL;
+
+    // Calculer la CDF
+    cdf[0] = histogram[0];
+    for (int i = 1; i < 256; i++) {
+        cdf[i] = histogram[i] + cdf[i-1];
+    }
+
+    return cdf;
+}
+
+void bmp8_equalize(t_bmp8* img) {
+    if (!img || !img->pixels) {
+        printf("Erreur : Image invalide\n");
+        return;
+    }
+
+    // Calculer l'histogramme
+    unsigned int* histogram = bmp8_computeHistogram(img);
+    if (!histogram) {
+        printf("Erreur : Calcul de l'histogramme échoué\n");
+        return;
+    }
+
+    // Calculer la CDF
+    unsigned int* cdf = bmp8_computeCDF(histogram);
+    if (!cdf) {
+        free(histogram);
+        printf("Erreur : Calcul de la CDF échoué\n");
+        return;
+    }
+
+    // Trouver cdf_min (première valeur non nulle)
+    unsigned int cdf_min = 0;
+    for (int i = 0; i < 256; i++) {
+        if (cdf[i] > 0) {
+            cdf_min = cdf[i];
+            break;
+        }
+    }
+
+    // Appliquer l'égalisation
+    if (cdf[255] == cdf_min) {
+        free(histogram);
+        free(cdf);
+        return;
+    }
+
+    double scale = 255.0 / (cdf[255] - cdf_min);
+    for (unsigned int i = 0; i < img->dataSize; i++) {
+        img->pixels[i] = (unsigned char)((cdf[img->pixels[i]] - cdf_min) * scale);
+    }
+
+    // Libérer la mémoire
+    free(histogram);
+    free(cdf);
 }
